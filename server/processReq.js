@@ -2,10 +2,10 @@ const _ = require('lodash');
 const DarkSky = require('forecast.io');
 const MapBox = require('mapbox');
 const json2html = require('json2html');
-const ForecastCtrl = require('../controllers/forecastCtrl');
-const Forecaster = require('../../modules/forecaster');
-const Geocode = require('../../modules/geocode');
-const env = require('../../env');
+const ForecastCtrl = require('./controllers/forecastCtrl');
+const Forecaster = require('../modules/forecaster');
+const Geocode = require('../modules/geocode');
+const env = require('../env');
 
 const mapbox = new MapBox(env.MAP_BOX_API_KEY);
 const darkSky = new DarkSky({
@@ -13,9 +13,9 @@ const darkSky = new DarkSky({
    timeout: env.DARK_SKY_TIMEOUT
 });
 
-
 const forecaster = Forecaster(darkSky);
 const geocode = Geocode(mapbox);
+
 const forecastCtrl = ForecastCtrl(forecaster, geocode);
 
 const response = (req, res, data) => {

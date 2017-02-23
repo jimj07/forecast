@@ -13,7 +13,6 @@
   "dependencies": {
     "express": "^4.14.1",
     "forecast.io": "0.0.11",
-    "json-to-html": "^0.1.2",
     "json2html": "0.0.8",
     "lodash": "^4.17.4",
     "mapbox": "^1.0.0-beta6",
@@ -28,5 +27,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "sinon": "^1.17.7"
+  },
+  "engines": {
+    "node": "6.10.0"
   }
 }

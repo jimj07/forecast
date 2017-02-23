@@ -3,6 +3,8 @@ const _ = require('lodash');
 const ERROR_MSG = require('../errormsg');
 
 module.exports = (mapbox) => {
+
+   // get the coordinates for the provided location
    const getGeocode = (location) => {
       return new Promise((resolve, reject) => {
          mapbox.geocodeForward(location, function (err, res) {

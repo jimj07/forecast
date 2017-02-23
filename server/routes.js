@@ -1,7 +1,7 @@
 'use strict';
 
 const Router = require('express').Router;
-const processReq = require('./middlewares/processReq');
+const processReq = require('./processReq');
 
 const router = new Router();
 
