@@ -8,8 +8,8 @@ MapBox - get coordinates of a location
 
 **modules/forecaster.js**
 Forecaster is responsible for doing API calls to DarkSky to get weather forecast data.
-getAll: get all the data for the location, including currently, 8 days forecast.
-getByDay: only get the data on the specific day for the location.
+getAll(): get all the data for the location, including currently, 8 days forecast.
+getByDay(): only get the data on the specific day for the location.
 
 **modules/geocode.js**
 Geocode is responsible for getting the coordinates of the provided location. 
