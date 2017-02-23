@@ -1,0 +1,275 @@
+{
+    "type": "FeatureCollection",
+    "query": [
+        "sydney"
+    ],
+    "features": [
+        {
+            "id": "place.4960085988742460",
+            "type": "Feature",
+            "text": "Sydney",
+            "place_name": "Sydney, New South Wales, Australia",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 0.99,
+            "properties": {
+                "wikidata": "Q3130"
+            },
+            "bbox": [
+                150.520928608,
+                -34.118344992,
+                151.343020992,
+                -33.578140996
+            ],
+            "center": [
+                151.21,
+                -33.868
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    151.21,
+                    -33.868
+                ]
+            },
+            "context": [
+                {
+                    "text": "2000",
+                    "id": "postcode.207"
+                },
+                {
+                    "text": "New South Wales",
+                    "id": "region.3703",
+                    "short_code": "AU-NSW",
+                    "wikidata": "Q3224"
+                },
+                {
+                    "text": "Australia",
+                    "id": "country.3104",
+                    "short_code": "au",
+                    "wikidata": "Q408"
+                }
+            ]
+        },
+        {
+            "id": "poi.13383272831438750",
+            "type": "Feature",
+            "text": "Sydney Airport (SYD)",
+            "place_name": "Sydney Airport (SYD), Airport Dr, Sydney, New South Wales 2020, Australia",
+            "place_type": [
+                "poi"
+            ],
+            "relevance": 0.99,
+            "properties": {
+                "landmark": true,
+                "tel": "02 9667 9111",
+                "address": "Airport Dr",
+                "category": "airport",
+                "maki": "airport"
+            },
+            "center": [
+                151.166916,
+                -33.936416
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    151.166916,
+                    -33.936416
+                ]
+            },
+            "context": [
+                {
+                    "text": "Mascot",
+                    "id": "locality.9874735187290030"
+                },
+                {
+                    "text": "Sydney",
+                    "id": "place.4960085988742460",
+                    "wikidata": "Q3130"
+                },
+                {
+                    "text": "2020",
+                    "id": "postcode.224"
+                },
+                {
+                    "text": "New South Wales",
+                    "id": "region.3703",
+                    "short_code": "AU-NSW",
+                    "wikidata": "Q3224"
+                },
+                {
+                    "text": "Australia",
+                    "id": "country.3104",
+                    "short_code": "au",
+                    "wikidata": "Q408"
+                }
+            ]
+        },
+        {
+            "id": "locality.15095128788742460",
+            "type": "Feature",
+            "text": "Sydney",
+            "place_name": "Sydney, Sydney, New South Wales, Australia",
+            "place_type": [
+                "locality"
+            ],
+            "relevance": 0.99,
+            "properties": {},
+            "bbox": [
+                151.19703293703,
+                -33.87970348087,
+                151.22295057247,
+                -33.85610880701
+            ],
+            "center": [
+                151.21,
+                -33.868
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    151.21,
+                    -33.868
+                ]
+            },
+            "context": [
+                {
+                    "text": "Sydney",
+                    "id": "place.4960085988742460",
+                    "wikidata": "Q3130"
+                },
+                {
+                    "text": "2000",
+                    "id": "postcode.207"
+                },
+                {
+                    "text": "New South Wales",
+                    "id": "region.3703",
+                    "short_code": "AU-NSW",
+                    "wikidata": "Q3224"
+                },
+                {
+                    "text": "Australia",
+                    "id": "country.3104",
+                    "short_code": "au",
+                    "wikidata": "Q408"
+                }
+            ]
+        },
+        {
+            "id": "poi.16166475988068580",
+            "type": "Feature",
+            "text": "Sydney Academy",
+            "place_name": "Sydney Academy, 49 Terrace St, Sydney, Nova Scotia B1P 2L6, Canada",
+            "place_type": [
+                "poi"
+            ],
+            "relevance": 0.99,
+            "properties": {
+                "landmark": true,
+                "wikidata": "Q7659814",
+                "tel": "(902) 562-5464",
+                "address": "49 Terrace St",
+                "category": "primary school, secondary school, elementary, school",
+                "maki": "school"
+            },
+            "center": [
+                -60.1807,
+                46.1384
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.1807,
+                    46.1384
+                ]
+            },
+            "context": [
+                {
+                    "text": "Sydney",
+                    "id": "neighborhood.6637558584742460"
+                },
+                {
+                    "text": "Sydney",
+                    "id": "place.4205853906742460",
+                    "wikidata": "Q932261"
+                },
+                {
+                    "text": "B1P 2L6",
+                    "id": "postcode.3618427584468210"
+                },
+                {
+                    "text": "Nova Scotia",
+                    "id": "region.218945",
+                    "short_code": "CA-NS",
+                    "wikidata": "Q1952"
+                },
+                {
+                    "text": "Canada",
+                    "id": "country.3179",
+                    "short_code": "ca",
+                    "wikidata": "Q16"
+                }
+            ]
+        },
+        {
+            "id": "poi.2836926838336840",
+            "type": "Feature",
+            "text": "Sydney Conservatorium of Music",
+            "place_name": "Sydney Conservatorium of Music, Macquarie St, Sydney, New South Wales 2000, Australia",
+            "place_type": [
+                "poi"
+            ],
+            "relevance": 0.99,
+            "properties": {
+                "landmark": true,
+                "wikidata": "Q2510091",
+                "tel": "(02) 9351 1216",
+                "address": "Macquarie St",
+                "category": "college, university",
+                "maki": "college"
+            },
+            "center": [
+                151.214353,
+                -33.863455
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    151.214353,
+                    -33.863455
+                ]
+            },
+            "context": [
+                {
+                    "text": "Sydney",
+                    "id": "locality.15095128788742460"
+                },
+                {
+                    "text": "Sydney",
+                    "id": "place.4960085988742460",
+                    "wikidata": "Q3130"
+                },
+                {
+                    "text": "2000",
+                    "id": "postcode.207"
+                },
+                {
+                    "text": "New South Wales",
+                    "id": "region.3703",
+                    "short_code": "AU-NSW",
+                    "wikidata": "Q3224"
+                },
+                {
+                    "text": "Australia",
+                    "id": "country.3104",
+                    "short_code": "au",
+                    "wikidata": "Q408"
+                }
+            ]
+        }
+    ],
+    "attribution": "NOTICE: © 2017 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained."
+}
