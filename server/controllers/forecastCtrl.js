@@ -16,10 +16,10 @@ module.exports = (forecaster, geocode) => {
                   coordinates.longtitude
                );
             }
-         })
+         });
    };
 
    return {
       getWeather: getWeather
-   }
-}
+   };
+};

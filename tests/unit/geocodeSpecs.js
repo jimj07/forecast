@@ -11,18 +11,18 @@ chai.use(chaiAsPromised);
 
 describe('geocode unit tests', () => {
     let mapbox = {
-        geocodeForward: (location, cb) => { }
+        geocodeForward: () => { }
     };
     let mapboxGetgeocodeStub;
 
     let sydCoord = {
         latitude: -33.868,
         longtitude: 151.21
-    }
+    };
 
     beforeEach(() => {
         mapboxGetgeocodeStub = sinon.stub(mapbox, 'geocodeForward');
-    })
+    });
 
     afterEach(() => {
         mapboxGetgeocodeStub.restore();
@@ -35,7 +35,7 @@ describe('geocode unit tests', () => {
             return geocode.getGeocode('Sydney')
                 .then((res) => {
                     expect(res).deep.equal(sydCoord);
-                })
+                });
         });
 
         it('should reject error: Invalid Location', () => {

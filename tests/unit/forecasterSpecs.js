@@ -10,13 +10,13 @@ chai.use(chaiAsPromised);
 
 describe('forecaster unit tests', () => {
     let darksky = {
-        get: (lat, long, options, cb) => { }
+        get: () => { }
     };
     let darkskyGetStub;
 
     beforeEach(() => {
         darkskyGetStub = sinon.stub(darksky, 'get');
-    })
+    });
 
     afterEach(() => {
         darkskyGetStub.restore();

@@ -1,6 +1,5 @@
 const weekday = require('../../modules/weekday');
 const expect = require('chai').expect;
-const chai = require('chai');
 
 describe('weekday unit tests', () => {
     describe('getCurDay()', () => {

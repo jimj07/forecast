@@ -22,11 +22,10 @@ module.exports = (mapbox) => {
                }
             }
          });
-      })
-
-   }
+      });
+   };
 
    return {
       getGeocode: getGeocode
    };
-}
+};

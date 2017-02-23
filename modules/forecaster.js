@@ -8,12 +8,12 @@ module.exports = (darkSky) => {
    const options = {
       exclude: 'minutely,hourly,flags,alert',
       units: 'auto'
-   }
+   };
 
    const getIndexByDay = (curDay, forecastDay) => {
       let diff = forecastDay - curDay;
       return diff > 0 ? diff : DAILY_ARR_LENGTH + diff - 1;
-   }
+   };
 
    // Public
    const getAll = (lat, long) => {
@@ -24,7 +24,7 @@ module.exports = (darkSky) => {
             } else {
                resolve(data);
             }
-         })
+         });
       });
    };
 
@@ -40,8 +40,8 @@ module.exports = (darkSky) => {
                      reject(ERROR_MSG.INVALID_WEEKDAY);
                   }
 
-                  let curtime = _.get(res, "currently.time");
-                  let timezone = _.get(res, "offset");
+                  let curtime = _.get(res, 'currently.time');
+                  let timezone = _.get(res, 'offset');
                   let curDay = weekday.getCurDay(curtime, timezone);
                   let index = getIndexByDay(curDay, forecastDay);
                   let weather = _.get(res, `daily.data.${index}`);
@@ -51,12 +51,12 @@ module.exports = (darkSky) => {
             })
             .catch(err => {
                reject(err);
-            })
-      })
+            });
+      });
    };
 
    return {
       getAll: getAll,
       getByDay: getByDay,
-   }
-}
+   };
+};

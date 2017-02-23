@@ -5,33 +5,30 @@ const chai = require('chai');
 const sinon = require('sinon');
 require('sinon-as-promised');
 
-const forecastData = require('./testData/forecastData');
-const geoData = require('./testData/geoData');
-
 chai.use(chaiAsPromised);
 
 describe('forecastCtrl unit tests', () => {
    let geocodeStub, forecastGetByDayStub, forecastGetAllStub;
 
    let geocode = {
-      getGeocode: (location) => { }
+      getGeocode: () => { }
    };
 
    let forecast = {
       getAll: () => { },
       getByDay: () => { }
-   }
+   };
 
    let sydCoord = {
       latitude: -33.868,
       longtitude: 151.21
-   }
+   };
 
    beforeEach(() => {
       geocodeStub = sinon.stub(geocode, 'getGeocode');
       forecastGetByDayStub = sinon.stub(forecast, 'getByDay');
       forecastGetAllStub = sinon.stub(forecast, 'getAll');
-   })
+   });
 
    afterEach(() => {
       geocodeStub.restore();
@@ -41,32 +38,32 @@ describe('forecastCtrl unit tests', () => {
 
    describe('getWeather()', () => {
       it('should return forecast data', () => {
-         let forecastData = { data: "data" };
+         let forecastData = { data: 'data' };
          let forecastCtrl = ForecastCtrl(forecast, geocode);
 
          geocodeStub.onCall(0).resolves(sydCoord);
          forecastGetAllStub.onCall(0).resolves(forecastData);
 
          return forecastCtrl.getWeather({
-            location: "Sydney"
+            location: 'Sydney'
          }).then((data) => {
             expect(data).deep.equal(forecastData);
-         })
+         });
       });
 
       it('should return forecast data for Tuesday', () => {
-         let forecastData = { data: "data" };
+         let forecastData = { data: 'data' };
          let forecastCtrl = ForecastCtrl(forecast, geocode);
 
          geocodeStub.onCall(0).resolves(sydCoord);
          forecastGetByDayStub.onCall(0).resolves(forecastData);
 
          return forecastCtrl.getWeather({
-            location: "Sydney",
+            location: 'Sydney',
             weekday: 'Tuesday'
          }).then((data) => {
             expect(data).deep.equal(forecastData);
-         })
+         });
       });
 
       it('should reject error: invalid location', () => {
@@ -76,7 +73,7 @@ describe('forecastCtrl unit tests', () => {
          geocodeStub.onCall(0).rejects(error);
 
          let result = forecastCtrl.getWeather({
-            location: "Sydney"
+            location: 'Sydney'
          });
 
          return expect(result).to.eventually.be.rejectedWith(error);
@@ -90,7 +87,7 @@ describe('forecastCtrl unit tests', () => {
          forecastGetAllStub.onCall(0).rejects(error);
 
          let result = forecastCtrl.getWeather({
-            location: "Sydney"
+            location: 'Sydney'
          });
 
          return expect(result).to.eventually.be.rejectedWith(error);

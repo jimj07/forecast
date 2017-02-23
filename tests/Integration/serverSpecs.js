@@ -12,7 +12,7 @@ describe('server integration tests', function () {
          .end((err, res) => {
             expect(res.statusCode).to.equal(404);
             expect(res.body).to.deep.equal({
-               "error": ERROR_MSG.NOT_FOUND
+               'error': ERROR_MSG.NOT_FOUND
             });
             done();
          });
@@ -25,7 +25,7 @@ describe('server integration tests', function () {
          .end((err, res) => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.deep.equal({
-               "error": ERROR_MSG.INVALID_LOCATION
+               'error': ERROR_MSG.INVALID_LOCATION
             });
             done();
          });
@@ -38,7 +38,7 @@ describe('server integration tests', function () {
          .end((err, res) => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.deep.equal({
-               "error": ERROR_MSG.INVALID_WEEKDAY
+               'error': ERROR_MSG.INVALID_WEEKDAY
             });
             done();
          });
@@ -78,6 +78,29 @@ describe('server integration tests', function () {
             expect(res.body).to.not.be.undefined;
             expect(res.body.location).to.equal('sydney');
             expect(res.body.weekday).to.equal('today');
+            done();
+         });
+   });
+
+   it('should return html type data', (done) => {
+      request(app)
+         .get('/weather/sydney/today')
+         .set('Accept', 'text/html')
+         .end((err, res) => {
+            expect(res.statusCode).to.equal(200);
+            expect(res.body).to.not.be.undefined;
+            expect(res.type).equal('text/html');
+            done();
+         });
+   });
+
+   it('should return nothing', (done) => {
+      request(app)
+         .get('/weather/sydney/today')
+         .set('Accept', 'text/plain')
+         .end((err, res) => {
+            expect(res.statusCode).to.equal(200);
+            expect(res.body).to.be.empty;
             done();
          });
    });

@@ -8,12 +8,12 @@ const ISO_DAY = {
    'friday': 5,
    'saturday': 6,
    'sunday': 7
-}
+};
 
 const getCurDay = (unixtime, timezone) => {
    let day = moment.unix(unixtime).utcOffset(timezone);
    return day.isoWeekday();
-}
+};
 
 const getISODay = (day) => {
    if (day === undefined || typeof day !== 'string') {
@@ -21,7 +21,7 @@ const getISODay = (day) => {
    }
 
    return ISO_DAY[day.toLowerCase()];
-}
+};
 
 module.exports.getCurDay = getCurDay;
 module.exports.getISODay = getISODay;
